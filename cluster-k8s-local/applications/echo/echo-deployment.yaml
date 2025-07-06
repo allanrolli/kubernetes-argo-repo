@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: echo1   
-  namespace: argocd
+  namespace: echo
 spec:
   selector:
     matchLabels:

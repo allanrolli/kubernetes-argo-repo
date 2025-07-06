@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: echo1
-  namespace: echo
+  namespace: argocd
 spec:
   type: ClusterIP
   ports:

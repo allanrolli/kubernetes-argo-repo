@@ -9,12 +9,12 @@ spec:
       repoURL: 'https://github.com/allanrolli/kubernetes-argo-repo'
       revision: HEAD
       directories:
-      - path: cluster-k8s-local/applications/**
+      - path: cluster-k8s-local/applications/*
   template:
     metadata:
       name: '{{path.basename}}'
     spec:
-      project: application-project
+      project: default
       syncPolicy:
         automated:
           prune: true

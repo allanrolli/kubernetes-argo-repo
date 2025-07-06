@@ -10,3 +10,4 @@ helmCharts:
   releaseName: argo-cd
   namespace: argocd
   valuesFile: values/argocd-values.yaml
+  includeCRDs: true

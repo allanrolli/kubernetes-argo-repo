@@ -7,7 +7,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/allanrolli/kubernetes-argo-repo
-      revision: main
+      revision: HEAD
       directories:
       - path: cluster-k8s-local/core/*
   template:
@@ -27,7 +27,7 @@ spec:
             maxDuration: 5m
       source:
         repoURL: https://github.com/allanrolli/kubernetes-argo-repo
-        targetRevision: main
+        targetRevision: HEAD
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc

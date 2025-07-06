@@ -10,6 +10,9 @@ spec:
   destinations:
   - namespace: '*'
     server: '*'
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'  
   syncWindows:
   # Window to deploy new configuration
   - kind: allow

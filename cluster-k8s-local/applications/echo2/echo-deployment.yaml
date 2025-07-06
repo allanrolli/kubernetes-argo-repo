@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo2   
+  namespace: echo2
+spec:
+  selector:
+    matchLabels:
+      app: echo2
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: echo2
+    spec:      
+      containers:
+      - name: echo2
+        image: hashicorp/http-echo
+        args:
+        - "-text=Argocd Lab to echo2"
+        ports:
+        - containerPort: 5678

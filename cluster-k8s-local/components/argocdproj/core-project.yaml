@@ -5,6 +5,11 @@ metadata:
   namespace: argocd
 spec:
   description: This is the core config to cluster-k8s-local
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
   syncWindows:
   # Window to deploy new configuration
   - kind: allow

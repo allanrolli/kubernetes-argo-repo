@@ -5,3 +5,8 @@ metadata:
   namespace: argocd
 spec:
   description: This is the application project to cluster-k8s-local
+  sourceRepos:
+  - '*'
+  destinations:
+  - namespace: '*'
+    server: '*'

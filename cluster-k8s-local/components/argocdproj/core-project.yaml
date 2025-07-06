@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: core-project
+  namespace: argocd
+spec:
+  description: This is the core config to cluster-k8s-local
+  syncWindows:
+  # Window to deploy new configuration
+  - kind: allow
+    schedule: '0 23 * * *'
+    duration: 1h

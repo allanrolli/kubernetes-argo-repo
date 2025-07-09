@@ -4,5 +4,5 @@ namespace: argocd
 
 resources:
 - ../../base
-- ../../../components/applicationsets
 - ../../../components/argocdproj
+- ../../../components/applicationsets

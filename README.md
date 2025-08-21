@@ -10,13 +10,13 @@ a good starting point and not what your final repo will look like.
 # ArgoCD Concepts
 
 ## Application
-Representa uma aplicação declarada no Git que será sincronizada e gerenciada pelo ArgoCD.
+Represents a declared application in Git that will be synchronized and managed by ArgoCD.
 
 ## ApplicationSet
-Automatiza a criação de múltiplas Applications com base em um template, útil para múltiplos clusters, ambientes ou projetos.
+Automates the creation of multiple Applications based on a template, useful for multiple clusters, environments, or projects.
 
 ## Project
-Define um escopo lógico para agrupar Applications, controlando permissões, destinos e repositórios.
+Defines a logical scope to group Applications, controlling permissions, destinations, and repositories.
 
 # Structure
 

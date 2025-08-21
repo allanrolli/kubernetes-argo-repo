@@ -7,6 +7,17 @@ This example assumes single repo for a single cluster. However, this can be modi
 easily) for poly/mono repos or for multiple clusters. This is meant as
 a good starting point and not what your final repo will look like.
 
+# ArgoCD Concepts
+
+## Application
+Representa uma aplicação declarada no Git que será sincronizada e gerenciada pelo ArgoCD.
+
+## ApplicationSet
+Automatiza a criação de múltiplas Applications com base em um template, útil para múltiplos clusters, ambientes ou projetos.
+
+## Project
+Define um escopo lógico para agrupar Applications, controlando permissões, destinos e repositórios.
+
 # Structure
 
 Below is an explanation on how this repo is laid out. You'll notice

@@ -32,6 +32,7 @@ spec:
         argocd-image-updater.argoproj.io/app.update-strategy: newest-build
         argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
         argocd-image-updater.argoproj.io/write-back-target: '{{wb_target}}'
+        argocd-image-updater.argoproj.io/app.pull-secret: pullsecret:argocd/git-creds
     spec:
       project: application-project
       syncPolicy:

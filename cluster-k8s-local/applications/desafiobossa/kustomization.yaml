@@ -4,3 +4,8 @@ kind: Kustomization
 resources:
 - bossa-deployment.yaml
 - bossa-service.yaml
+
+images:
+  - name: ghcr.io/allanrolli/desafiobossa
+    newName: ghcr.io/allanrolli/desafiobossa
+    newTag: "0000000000000000000000000000000000000000"

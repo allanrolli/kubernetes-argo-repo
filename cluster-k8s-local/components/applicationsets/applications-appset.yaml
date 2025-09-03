@@ -5,16 +5,24 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - git:
-      repoURL: 'https://github.com/allanrolli/kubernetes-argo-repo'
-      revision: HEAD
-      directories:
-      - path: cluster-k8s-local/applications/*
+  # - git:
+  #     repoURL: 'https://github.com/allanrolli/kubernetes-argo-repo'
+  #     revision: HEAD
+  #     directories:
+  #     - path: cluster-k8s-local/applications/*
   - list:
       elements:
         - name: desafiobossa
           path: cluster-k8s-local/applications/desafiobossa
           image: ghcr.io/allanrolli/desafiobossa            
+          wb_target: kustomization
+        - name: echo
+          path: cluster-k8s-local/applications/echo
+          image: ghcr.io/allanrolli/echo
+          wb_target: kustomization
+        - name: echo2
+          path: cluster-k8s-local/applications/echo2
+          image: ghcr.io/allanrolli/echo2
           wb_target: kustomization
   template:
     metadata:

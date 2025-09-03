@@ -26,7 +26,7 @@ spec:
           wb_target: kustomization
   template:
     metadata:
-      name: '{{path.basename}}'
+      name: '{{name}}'
       annotations:
         argocd-image-updater.argoproj.io/image-list: 'app={{image}}'
         argocd-image-updater.argoproj.io/app.update-strategy: newest-build

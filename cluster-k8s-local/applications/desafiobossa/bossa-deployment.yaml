@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: desafiobossa  
+  namespace: argocd
+  labels:
+    app: "desafiobossa"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: desafiobossa
+  template:
+    metadata:
+      labels:
+        app: desafiobossa
+    spec:
+      containers:
+        - name: desafiobossa
+          image: ghcr.io/allanrolli/desafiobossa:latest    
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+      - name: github-registry

@@ -14,7 +14,7 @@ spec:
       elements:
         - name: desafiobossa
           path: cluster-k8s-local/applications/desafiobossa
-          image: ghcr.io/allanrolli/desafiobossa            
+          image: ghcr.io/allanrolli/desafiobossa:latest            
           wb_target: kustomization
         - name: echo
           path: cluster-k8s-local/applications/echo

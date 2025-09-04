@@ -14,7 +14,7 @@ spec:
       elements:
         - name: desafiobossa
           path: cluster-k8s-local/applications/desafiobossa
-          image: ghcr.io/allanrolli/desafiobossa:master            
+          image: ghcr.io/allanrolli/desafiobossa            
           wb_target: kustomization
         - name: echo
           path: cluster-k8s-local/applications/echo
@@ -29,7 +29,7 @@ spec:
       name: '{{name}}'
       annotations:
         argocd-image-updater.argoproj.io/image-list: 'app={{image}}'
-        argocd-image-updater.argoproj.io/app.update-strategy: digest
+        argocd-image-updater.argoproj.io/app.update-strategy: newest-build
         argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
         argocd-image-updater.argoproj.io/write-back-target: '{{wb_target}}'
         argocd-image-updater.argoproj.io/app.pull-secret: pullsecret:argocd/github-registry

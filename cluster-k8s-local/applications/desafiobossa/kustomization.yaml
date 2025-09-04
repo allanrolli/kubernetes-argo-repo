@@ -1,8 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+
 resources:
 - bossa-deployment.yaml
 - bossa-service.yaml
+
 images:
-- name: ghcr.io/allanrolli/desafiobossa
-  digest: sha256:e3be854537238ceaaaf19f86a7cb1c1ec079ec7fd4f11a183bab8dd937503864
+  - name: ghcr.io/allanrolli/desafiobossa
+    newName: ghcr.io/allanrolli/desafiobossa
+    newTag: "latest"

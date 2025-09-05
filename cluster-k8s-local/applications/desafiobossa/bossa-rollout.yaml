@@ -1,0 +1,41 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: desafiobossa
+  namespace: argocd
+spec:
+  replicas: 4
+  selector:
+    matchLabels: { 
+      app: desafiobossa
+    }
+  template:
+    metadata:
+      labels: { 
+        app: desafiobossa
+      }
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/allanrolli/desafiobossa:latest
+          ports: [{ 
+            containerPort: 3000
+           }]
+  strategy:
+    canary:
+      dynamicStableScale: true
+      trafficRouting:
+        istio:
+          virtualService:
+            name: desafiobossa
+            routes: ["http"]
+          destinationRule:
+            name: desafiobossa
+            stableSubsetName: stable
+            canarySubsetName: canary
+      steps:
+        - setWeight: 20
+        - pause: { duration: 60 }
+        - setWeight: 50
+        - pause: { duration: 120 }
+        - setWeight: 100

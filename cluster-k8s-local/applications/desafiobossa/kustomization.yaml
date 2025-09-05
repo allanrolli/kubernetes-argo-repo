@@ -3,6 +3,9 @@ kind: Kustomization
 
 resources:
 - bossa-deployment.yaml
+- bossa-rollout.yaml
+- bossa-virtualservice.yaml
+- bossa-destinationrule.yaml
 - bossa-service.yaml
 
 images:

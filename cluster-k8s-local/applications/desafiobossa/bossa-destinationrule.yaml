@@ -1,0 +1,10 @@
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: desafiobossa
+  namespace: argocd
+spec:
+  host: desafiobossa.argocd.svc.cluster.local
+  subsets:
+    - name: stable   
+    - name: canary

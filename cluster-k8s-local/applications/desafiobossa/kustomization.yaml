@@ -8,4 +8,4 @@ resources:
 - bossa-service.yaml
 images:
 - name: ghcr.io/allanrolli/desafiobossa
-  newTag: master
+  digest: sha256:3abf6c7261646ef9b9c5876b42c9e73535fc73e023fe1a2531663305c35062e6

@@ -45,6 +45,13 @@ spec:
             duration: 15s
             factor: 2
             maxDuration: 5m
+      ignoreDifferences:
+        - group: argoproj.io
+          kind: Application
+          managedFieldsManagers:
+            - desafiobossa
+          jsonPointers:
+            - /spec/syncPolicy/automated
       source:
         repoURL: 'https://github.com/allanrolli/kubernetes-argo-repo'
         targetRevision: HEAD

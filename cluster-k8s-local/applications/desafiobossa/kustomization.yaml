@@ -8,4 +8,4 @@ resources:
 - bossa-service.yaml
 images:
 - name: ghcr.io/allanrolli/desafiobossa
-  newTag: master
+  newTag: latest
